@@ -9,6 +9,8 @@ body{
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -39,7 +41,7 @@ a:focus{
 	top: 0;
 	width: 100%;
 	min-height: 100%;
-	background: linear-gradient(135deg, #e1d6f3, #c4a8e6); /*url(../images/bg.jpg) no-repeat bottom center;*/
+	background: #3c1a5f; /*linear-gradient(135deg, #e1d6f3, #c4a8e6); url(../images/bg.jpg) no-repeat bottom center;*/
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -54,7 +56,7 @@ a:focus{
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background: rgba(0,0,0,0);
+	background: rgba(0,0,0,0.1);
 }
 
 .coming-soon-box{
@@ -76,7 +78,7 @@ a:focus{
 }
 
 .logo h1:first-letter{
-	color: #8C30F5;
+	color: #F1C1FF;
 }
 
 .logo p{
@@ -95,7 +97,7 @@ a:focus{
 }
 
 .coming-text h2{
-	color: #8C30F5;
+	color: #F1C1FF;
 	font-size: 54px;
 	letter-spacing: 0.1em;
 	font-weight: 700;
@@ -129,7 +131,7 @@ a:focus{
 }
 
 .timer .timer-wrapper .text{
-	color: #8C30F5;
+	color: #F1C1FF;
 	text-transform: uppercase;
 	font-size: 16px;
 }
@@ -163,7 +165,7 @@ a:focus{
 	font-size: 14px;
 	font-weight: 700;
 	margin-left: -5px;
-	background: #8C30F5;
+	background: #F1C1FF;
 	vertical-align: top;
 	transition: all 0.3s;
 	outline: 0;
@@ -188,7 +190,7 @@ a:focus{
 }
 
 .social-link a:hover{
-	color: #8C30F5;
+	color: #F1C1FF;
 }
 
 @media only screen and (max-width:768px){
