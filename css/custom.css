@@ -56,7 +56,7 @@ a:focus{
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background: rgba(0,0,0,0.55);
+	background: rgba(0,0,0,0.6);
 }
 
 .coming-soon-box{
@@ -78,7 +78,7 @@ a:focus{
 }
 
 .logo h1:first-letter{
-	color: #F1C1FF;
+	color: #c59ed1;
 }
 
 .logo p{
@@ -97,7 +97,7 @@ a:focus{
 }
 
 .coming-text h2{
-	color: #F1C1FF;
+	color: #c59ed1;
 	font-size: 54px;
 	letter-spacing: 0.1em;
 	font-weight: 700;
@@ -131,7 +131,7 @@ a:focus{
 }
 
 .timer .timer-wrapper .text{
-	color: #F1C1FF;
+	color: #c59ed1;
 	text-transform: uppercase;
 	font-size: 16px;
 }
@@ -165,7 +165,7 @@ a:focus{
 	font-size: 14px;
 	font-weight: 700;
 	margin-left: -5px;
-	background: #F1C1FF;
+	background: #c59ed1;
 	vertical-align: top;
 	transition: all 0.3s;
 	outline: 0;
@@ -190,7 +190,7 @@ a:focus{
 }
 
 .social-link a:hover{
-	color: #F1C1FF;
+	color: #c59ed1;
 }
 
 @media only screen and (max-width:768px){
