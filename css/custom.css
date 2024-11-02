@@ -41,7 +41,7 @@ a:focus{
 	top: 0;
 	width: 100%;
 	min-height: 100%;
-	background: #4146e7; /*linear-gradient(135deg, #e1d6f3, #c4a8e6); url(../images/bg.jpg) no-repeat bottom center;*/
+	background: #4146e7; 
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -69,7 +69,7 @@ a:focus{
 	position: fixed;
 	top: 30px;
 	left: 30px;
-	width: 200px;
+	width: 150px;
 }
 
 .logo h1{
@@ -196,13 +196,13 @@ a:focus{
 
 @media only screen and (max-width:768px){
 	.logo{
-		position: fixed;
+		position: relative;
 		top: 20px;
 		left: 20px;
 	}
 	
 	.social-link{
-		width: 100%;
+		width: 100%;	
 		position: relative;
 		top: 0;
 		left: 0;
@@ -219,6 +219,16 @@ a:focus{
 ****************************************/
 
 @media only screen and (max-width:480px){
+	.logo {
+		top: 0px;
+		left: 0px;
+        margin-bottom: 20px; /* Adds space below the logo */
+		width: 100px;
+    }
+
+    .coming-text {
+        margin-top: 10px; /* Adds space above the coming text */
+    }
 	.timer .timer-wrapper{
 		width: 100px;
 		height: 100px;
