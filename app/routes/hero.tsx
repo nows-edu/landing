@@ -9,13 +9,13 @@ import unimateLogo from '../assets/hero/Unimate-logo.png';
 const FeatureCard = ({ icon: Icon, title, description, link }) => (
     <div className="bg-gray-900/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center text-center">
       <div className="bg-gray-800 rounded-full p-4 mb-6">
-        <Icon className="w-6 h-6 text-purple-400" />
+        <Icon className="w-6 h-6 text-[#6D4CFF]" />
       </div>
       <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
       <p className="text-gray-400 mb-6">{description}</p>
       <a 
         href={link} 
-        className="text-purple-400 flex items-center gap-2 hover:text-purple-300 transition-colors"
+        className="text-[#6D4CFF] flex items-center gap-2 hover:text-purple-300 transition-colors"
       >
         Saber más <ArrowRight className="w-4 h-4" />
       </a>
@@ -96,13 +96,13 @@ const [email, setEmail] = useState('');
           <div className="lg:w-1/2 text-white space-y-6">
             <div className="text-sm font-medium mb-4">By students, for students</div>
             <h1 className="text-5xl font-bold leading-tight">
-              Vive la <span className="text-purple-400">experiencia</span><br />
+              Vive la <span className="text-[#6D4CFF]">experiencia</span><br />
               universitaria<br />
-              <span className="text-purple-400">más allá</span> de las clases
+              <span className="text-[#6D4CFF]">más allá</span> de las clases
             </h1>
             <p className="text-gray-300 text-lg max-w-md">
               Descubre nuevos eventos, conecta con otros estudiantes y,
-              sobre todo, disfruta <span className="text-purple-400">sin límites</span>.
+              sobre todo, disfruta <span className="text-[#6D4CFF]">sin límites</span>.
             </p>
             
             {/* Email input */}
