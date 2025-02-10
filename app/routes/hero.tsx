@@ -1,35 +1,34 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Users, FolderOpen, Wallet } from 'lucide-react';
 
 // Assets
 import socialMediaPana from '../assets/hero/Social-media-pana.svg';
 import unimateLogo from '../assets/hero/Unimate-logo.png';
 
-
 const FeatureCard = ({ icon: Icon, title, description, link }) => (
-    <div className="bg-gray-900/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center text-center">
-      <div className="bg-gray-800 rounded-full p-4 mb-6">
-        <Icon className="w-6 h-6 text-[#6D4CFF]" />
-      </div>
-      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-gray-400 mb-6">{description}</p>
-      <a 
-        href={link} 
-        className="text-[#6D4CFF] flex items-center gap-2 hover:text-purple-300 transition-colors"
-      >
-        Saber más <ArrowRight className="w-4 h-4" />
-      </a>
+  <div className="bg-gray-900/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center text-center">
+    <div className="bg-gray-800 rounded-full p-4 mb-6">
+      <Icon className="w-6 h-6 text-[#6D4CFF]" />
     </div>
-  );
+    <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+    <p className="text-gray-400 mb-6">{description}</p>
+    <a 
+      href={link} 
+      className="text-[#6D4CFF] flex items-center gap-2 hover:text-purple-300 transition-colors"
+    >
+      Saber más <ArrowRight className="w-4 h-4" />
+    </a>
+  </div>
+);
 
 const HeroSection = () => {
-const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const features = [
     {
       icon: Users,
       title: "Conéctate con tu campus y amigos",
-      description: "Desde eventos hasta clubes, explora las actividades de los campus universitarios a través de nuestro mapa interactivo y mantente al tanto de lo que sucede.",
+      description: "Desde eventos hasta clubes, explora las actividades de los campus universitarios y mantente al tanto de lo que sucede.",
       link: "#"
     },
     {
@@ -45,7 +44,6 @@ const [email, setEmail] = useState('');
       link: "#"
     }
   ];
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -158,6 +156,14 @@ const [email, setEmail] = useState('');
           ))}
         </div>
       </div>
+      {/* Coming Soon text */}
+      <div className="relative w-full flex items-center justify-center py-40">
+        <h2 className="text-4xl font-bold leading-tight text-center text-white z-10">
+          Coming Soon
+        </h2>
+      </div>
+      {/* Additional gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 z-0"></div>
     </div>
   );
 };
