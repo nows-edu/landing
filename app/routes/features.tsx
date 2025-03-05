@@ -11,10 +11,10 @@ const Features = () => {
     {
       title: (
         <>
-          Un <span className="text-[#6D4CFF]">mapa interactivo</span> interuniversitario
+          Tu <span className="text-[#6D4CFF]">feed</span> de retos universitarios
         </>
       ),
-      description: "Descubre en tiempo real todas las actividades y eventos que se realizan en las universidades, identifica puntos clave del campus y encuentra nuevos espacios para disfrutar y conectar. ¡Mantente siempre informado sobre todo lo que sucede en tu universidad y más allá!",
+      description: "Participa en desafíos únicos, muestra tu talento y gana recompensas. ¡Desde retos académicos hasta actividades recreativas, siempre hay algo nuevo por descubrir y compartir con la comunidad de NOWS!",
       imageSrc: socialMediaPana,
       imageAlt: "Interactive map illustration",
       reverse: true
@@ -25,7 +25,7 @@ const Features = () => {
           <span className="text-[#5956E9]">Descubre</span> fiestas, actividades y eventos
         </>
       ),
-      description: "El portal de eventos de UNImate te permite ver las actividades gratuitas que se ofrezcan en las universidades. Con el calendario o el buscador podrás encontrar la actividad que más se adapte a ti y buscar gente que con quien compartirlo.",
+      description: "El portal de eventos de NOWS te permite ver las actividades gratuitas que se ofrezcan en las universidades. Con el calendario o el buscador podrás encontrar la actividad que más se adapte a ti y buscar gente que con quien compartirlo.",
       imageSrc: djParty,
       imageAlt: "Events illustration",
       reverse: false
@@ -36,7 +36,7 @@ const Features = () => {
           Encuentra tu <span className="text-[#6D4CFF]">comunidad</span> ideal
         </>
       ),
-      description: "En UNImate, queremos facilitarte la conexión con otros estudiantes basándonos en tus intereses y necesidades. Con nuestro recomendador de perfiles, podrás encontrar compañeros para compartir piso o conocer a alguien con quien salir a tomar algo.",
+      description: "En NOWS, queremos facilitarte la conexión con otros estudiantes basándonos en tus intereses y necesidades. Con nuestro recomendador de perfiles, podrás encontrar compañeros para compartir piso o conocer a alguien con quien salir a tomar algo.",
       imageSrc: sportFamily,
       imageAlt: "Community illustration",
       reverse: true
@@ -47,7 +47,7 @@ const Features = () => {
           <span className="text-[#5956E9]">Conoce</span> a gente según tus necesidades
         </>
       ),
-      description: "En UNImate, te ayudamos a encontrar personas que compartan tus intereses. A través de nuestro recomendador de perfiles, podrás conocer a futuros compañeros de piso, amigos para salir o incluso personas con las que compartir actividades universitarias.",
+      description: "En NOWS, te ayudamos a encontrar personas que compartan tus intereses. A través de nuestro recomendador de perfiles, podrás conocer a futuros compañeros de piso, amigos para salir o incluso personas con las que compartir actividades universitarias.",
       imageSrc: swipeProfile,
       imageAlt: "Community illustration",
       reverse: false

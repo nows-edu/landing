@@ -1,5 +1,5 @@
 import React from 'react';
-import unimateLogo from '../assets/hero/Unimate-logo.png';
+import unimateLogo from '../assets/hero/Unimate-logo.svg';
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <img 
           src={unimateLogo}
-          alt="UNImate" 
+          alt="NOWS" 
           className="h-12"
         />
       </div>

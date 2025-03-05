@@ -3,7 +3,7 @@ import { ArrowRight, Users, FolderOpen, Wallet } from 'lucide-react';
 
 // Assets
 import socialMediaPana from '../assets/hero/Social-media-pana.svg';
-import unimateLogo from '../assets/hero/Unimate-logo.png';
+import unimateLogo from '../assets/hero/Unimate-logo.svg';
 
 
 const FeatureCard = ({ icon: Icon, title, description, link }) => (
@@ -41,7 +41,7 @@ const [email, setEmail] = useState('');
     {
       icon: Wallet,
       title: "Apoyo y diversión de la mano",
-      description: "En UNImate, cada paso que tomes en tu viaje universitario es recompensado. Participa en actividades, sigue tus objetivos y consigue premios en sorteos exclusivos. Tendrás posibilidades infinitas, ¡hazla tuya!",
+      description: "En NOWS, cada paso que tomes en tu viaje universitario es recompensado. Participa en actividades, sigue tus objetivos y consigue premios en sorteos exclusivos. Tendrás posibilidades infinitas, ¡hazla tuya!",
       link: "#"
     }
   ];
@@ -87,7 +87,7 @@ const [email, setEmail] = useState('');
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="pt-8 flex justify-center">
-          <img src={unimateLogo} alt="UNiMATE" className="h-12" />
+          <img src={unimateLogo} alt="NOWS" className="h-24" />
         </div>
 
         {/* Hero content */}
@@ -106,12 +106,30 @@ const [email, setEmail] = useState('');
             </p>
             
             {/* Email input */}
-            <form onSubmit={handleSubmit} className="flex items-center gap-3 mt-8 max-w-md">
+            <form onSubmit={async (e) => {
+                e.preventDefault();
+                const email = e.target.elements.email.value;
+                try {
+                  const response = await fetch('https://script.google.com/macros/s/AKfycbymk_o7QJ8s3u3D4ls5XcFXcS8W0mk7Xp6wr0vmTlJSK_JgId8bx2-dC4qtclOLPzrNYg/exec', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'text/plain' }, // Use JSON explicitly
+                    body: JSON.stringify({ email }),
+                  });
+                  if (response.ok) {
+                    alert('Thank you for subscribing!');
+                  } else {
+                    console.error('Server error:', await response.text());
+                    alert('Error submitting form.');
+                  }
+                } catch (error) {
+                  console.error('Network error:', error);
+                  alert('Network error. Please try again.');
+                }
+              }} className="flex items-center gap-3 mt-8 max-w-md">
                 <input
                     type="email"
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    
                     placeholder="Introduce tu correo..."
                     required
                     className="w-full px-6 py-4 rounded-[24px] bg-white/10 backdrop-blur-sm 

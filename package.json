@@ -2,7 +2,7 @@
   "name": "landing",
   "private": true,
   "type": "module",
-  "homepage": "https://unimate.es",
+  "homepage": "https://nows.es",
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
