@@ -5,6 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        montserratAlt: ['Montserrat Alternates', 'sans-serif'],
+        josefinSans: ['Josefin Sans', 'sans-serif'],
         sans: [
           '"Inter"',
           "ui-sans-serif",
@@ -15,6 +17,7 @@ export default {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        darkerGrotesque: ['Darker Grotesque', 'sans-serif'],
       },
     },
   },
