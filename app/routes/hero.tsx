@@ -3,19 +3,19 @@ import { ArrowRight, Users, FolderOpen, Wallet } from 'lucide-react';
 
 // Assets
 import socialMediaPana from '../assets/hero/Social-media-pana.svg';
-import unimateLogo from '../assets/hero/Unimate-logo.svg';
+import unimateLogo from '../assets/hero/NOWS-logo.svg';
 
 
 const FeatureCard = ({ icon: Icon, title, description, link }) => (
     <div className="bg-gray-900/60 backdrop-blur-sm rounded-3xl p-8 flex flex-col items-center text-center">
       <div className="bg-gray-800 rounded-full p-4 mb-6">
-        <Icon className="w-6 h-6 text-[#6D4CFF]" />
+        <Icon className="w-6 h-6 text-[#769AFF]" />
       </div>
       <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
       <p className="text-gray-400 mb-6">{description}</p>
       <a 
         href={link} 
-        className="text-[#6D4CFF] flex items-center gap-2 hover:text-purple-300 transition-colors"
+        className="text-[#769AFF] flex items-center gap-2 hover:text-purple-300 transition-colors"
       >
         Saber más <ArrowRight className="w-4 h-4" />
       </a>
@@ -46,29 +46,8 @@ const [email, setEmail] = useState('');
     }
   ];
 
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/xpwzqyvw', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-      
-      if (response.ok) {
-        setSubmitted(true);
-        setEmail('');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-  };
-
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-br from-emerald-900 via-gray-900 to-purple-900 overflow-hidden">
+    <div className="relative min-h-screen w-full bg-white bg-gradient-to-br from-green-100 via-white to-indigo-400  overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-20 left-20">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -84,25 +63,25 @@ const [email, setEmail] = useState('');
       </div>
 
       {/* Main content container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
         {/* Logo */}
-        <div className="pt-8 flex justify-center">
+        <div className="absolute top-8 left-8">
           <img src={unimateLogo} alt="NOWS" className="h-24" />
         </div>
 
         {/* Hero content */}
         <div className="flex flex-col lg:flex-row items-center justify-between pt-20 pb-12">
           {/* Left side content */}
-          <div className="lg:w-1/2 text-white space-y-6">
-            <div className="text-sm font-medium mb-4">By students, for students</div>
-            <h1 className="text-5xl font-bold leading-tight">
-              Vive la <span className="text-[#6D4CFF]">experiencia</span><br />
-              universitaria<br />
-              <span className="text-[#6D4CFF]">más allá</span> de las clases
+          <div className="lg:w-1/2 text-black space-y-6">
+            <div className="text-lg font-medium mb-4">By students, for students</div>
+            <h1 className="text-5xl font-bold">
+              La <span className="text-[#769AFF]">mejor parte</span><br />
+              de la uni empieza<br />
+              <span className="text-[#769AFF]">aquí</span>.
             </h1>
-            <p className="text-gray-300 text-lg max-w-md">
+            <p className="text-gray-700 text-lg">
               Descubre nuevos eventos, conecta con otros estudiantes y,
-              sobre todo, disfruta <span className="text-[#6D4CFF]">sin límites</span>.
+              sobre todo, disfruta <span className="text-[#769AFF]">sin límites</span>.
             </p>
             
             {/* Email input */}
@@ -132,13 +111,13 @@ const [email, setEmail] = useState('');
                     
                     placeholder="Introduce tu correo..."
                     required
-                    className="w-full px-6 py-4 rounded-[24px] bg-white/10 backdrop-blur-sm 
-                       border border-white/20 text-white placeholder-gray-400 
-                       focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-6 py-4 rounded-[24px] bg-gray-200/50 backdrop-blur-sm 
+               border border-gray/20 text-black placeholder-gray-600 
+               focus:outline-none focus:ring-2 focus:ring-purple-900 focus:ring-opacity-70"
                 />
                 <button
                     type="submit"
-                    className="p-4 rounded-full bg-purple-600 hover:bg-purple-700 transition-colors flex items-center justify-center"
+                    className="p-4 rounded-full bg-[#769AFF] hover:bg-purple-700 transition-colors flex items-center justify-center"
                 >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
