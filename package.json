@@ -17,7 +17,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-router build && rm -rf docs/* && mv build/* docs",
+    "build": "react-router build && rm -rf docs/* && mv build/client/* docs",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc --build --noEmit"
