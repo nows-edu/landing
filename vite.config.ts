@@ -10,5 +10,8 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
+  build: {
+    outDir: "docs", // Output directory for static files
+  },
   plugins: [reactRouter(), tsconfigPaths()],
 });
