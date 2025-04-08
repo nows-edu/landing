@@ -1,4 +1,5 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { ArrowRight, Users, FolderOpen, Wallet } from 'lucide-react';
 
 // Assets
@@ -23,8 +24,33 @@ const FeatureCard = ({ icon: Icon, title, description, link }) => (
   );
 
 const HeroSection = () => {
-const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbymk_o7QJ8s3u3D4ls5XcFXcS8W0mk7Xp6wr0vmTlJSK_JgId8bx2-dC4qtclOLPzrNYg/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setEmail(''); // Clear the input field
+        navigate('/thanks'); // Redirect to the thanks page
+      } else {
+        console.error('Server error:', await response.text());
+        alert('Error submitting form.');
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      alert('Network error. Please try again.');
+    }
+  };
+
   const features = [
     {
       icon: Users,
@@ -45,27 +71,6 @@ const [email, setEmail] = useState('');
       link: "#"
     }
   ];
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://formspree.io/f/xpwzqyvw', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-      
-      if (response.ok) {
-        setSubmitted(true);
-        setEmail('');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-  };
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-emerald-900 via-gray-900 to-purple-900 overflow-hidden">
@@ -106,30 +111,12 @@ const [email, setEmail] = useState('');
             </p>
             
             {/* Email input */}
-            <form onSubmit={async (e) => {
-                e.preventDefault();
-                const email = e.target.elements.email.value;
-                try {
-                  const response = await fetch('https://script.google.com/macros/s/AKfycbymk_o7QJ8s3u3D4ls5XcFXcS8W0mk7Xp6wr0vmTlJSK_JgId8bx2-dC4qtclOLPzrNYg/exec', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'text/plain' }, // Use JSON explicitly
-                    body: JSON.stringify({ email }),
-                  });
-                  if (response.ok) {
-                    alert('Thank you for subscribing!');
-                  } else {
-                    console.error('Server error:', await response.text());
-                    alert('Error submitting form.');
-                  }
-                } catch (error) {
-                  console.error('Network error:', error);
-                  alert('Network error. Please try again.');
-                }
-              }} className="flex items-center gap-3 mt-8 max-w-md">
+            <form onSubmit={handleSubmit} className="flex items-center gap-3 mt-8 max-w-md">
                 <input
                     type="email"
                     name="email"
-                    
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Introduce tu correo..."
                     required
                     className="w-full px-6 py-4 rounded-[24px] bg-white/10 backdrop-blur-sm 
